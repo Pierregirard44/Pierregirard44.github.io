@@ -1,0 +1,525 @@
+/* appel de la font google Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* reset des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* appel de la font exluivemnt pour le body pour eviter de charger la font pour chaque element */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* style du slider */
+.slider {
+    width: 100%;
+    min-height: 80vh;
+    aspect-ratio: 16/9;
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9);
+}
+
+/* style des images du slider */
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* style du contenu du slider */
+.slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+/* style global des h1,h2,p*/
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+}
+
+/* style du paragraphe du slider */
+.slider-content p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+/* création d'une div qui prend toute la largeur de la page avec un padding haut/bas de 100px */
+.section {
+    padding: 50px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+/* box à l'intérieur de la section qui fait 1280px et qui est centrée sur la section */
+.boxed {
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+
+/* rendre le contenu flex via la classe */
+.flex {
+    display: flex;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w15 {
+    width: 15%;
+}
+
+/* donner une largeur de 25% à l'élément qui a la classe w25 */
+.w25 {
+    width: 25%;
+}
+
+/* donner une largeur de 32% à l'élément qui a la classe w32 */
+.w32 {
+    width: 32%;
+}
+
+/* donner une largeur de 40% à l'élément qui a la classe w40 */
+.w40 {
+    width: 40%;
+}
+
+/* donner une largeur de 60% à l'élément qui a la classe w60 */
+.w60 {
+    width: 60%;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.margin-bottom {
+    margin-bottom: 5%;
+}
+
+.text-black {
+    color: black;
+}
+
+/* centrer le texte via la classe */
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+    place-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.skill {
+    /* background: #716e6e; */
+    border-radius: 15px;
+    padding: 20px;
+    /* margin: 10px; */
+    box-sizing: border-box;
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.realisation {
+    height: auto;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.realisation:hover img {
+    filter: brightness(100%);
+    box-shadow: 0 0 40px rgba(254, 204, 0, 100);
+    cursor: pointer;
+}
+
+.realisation-modal {
+    box-shadow: none;
+    cursor : auto;
+    border-radius: none;
+}
+
+.realisation h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    width: max-content;
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.realisation:hover h3 {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.realisation a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+.realisation-text a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+.realisation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: .4s ease;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.icon {
+    display: block;
+    font-size: 3rem;
+}
+
+.label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.value {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.contact {
+    border-radius: 50%;
+    padding: 15px;
+    height: auto;
+    aspect-ratio: 1/1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact img {
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: .6s ease;
+}
+
+.contact img:hover {
+    filter: brightness(120%);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black ;
+    padding-block: 10px;
+    box-shadow: 0 0 10px rgba(254, 204, 0, 0.7);
+}
+
+.header-logo {
+    display: block;;
+}
+
+.header-logo img {
+    max-width: 80px;
+    border-radius: 50px;
+    transition: 0.4s ease;
+}
+
+.header-logo img:hover {
+    box-shadow: 0 0 20px rgba(254, 204, 0, 25);
+}
+.header-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    box-sizing: border-box;
+    transition: 0.4s ease;
+    border-radius: 25px;
+}
+
+.header-menu li a:hover {
+    box-shadow: 0 0 20px rgba(254, 204, 0, 100);
+}
+
+.header-menu-mobile {
+    display: none;
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Reste à l'écran même en défilant */
+    z-index: 1; /* Au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pleine largeur */
+    height: 100%; /* Pleine hauteur */
+    overflow: auto; /* Activer le défilement si nécessaire */
+    background-color: rgb(0,0,0); /* Couleur de fond */
+    background-color: rgba(0,0,0,0.4); /* Avec transparence */
+}
+
+/* Contenu de la fenêtre modale */
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; /* 15% du haut de la page et centré horizontalement */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Peut être ajusté selon vos besoins */
+    box-shadow: 0 0 20px rgba(254, 204, 0, 100);
+
+}
+
+.modalRaclavel img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modalYellowaves img {
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modalRpg img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-content a {
+    text-decoration: underline;
+    color: rgba(254, 204, 0, 100);
+}
+
+/* Bouton de fermeture */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media(max-width:810px) {
+    header {
+        height: 60px;
+    }
+
+    .header-menu-mobile {
+        display: block;
+        border: 0px;
+        background-color: black;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        color: white;
+    }
+
+    .header-logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+
+    .header-logo img {
+        max-width: 70px;
+    }
+
+    .header-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        display: none;
+        z-index: 999;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .section {
+        padding-block: 40px;
+        padding-inline: 0px;
+    }
+
+    .slider {
+        min-height: 40vh;
+        text-align: center;
+    }
+
+    .skill {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+        text-wrap: pretty;
+    }
+
+    .slider-content {
+        width: 90%;
+    }
+
+    .slider-content p {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        text-wrap: balance;;
+    }
+
+    .toColumn {
+        flex-direction: column;
+    }
+
+    .mCenter {
+        text-align: center;
+    }
+
+    .mspace-around {
+        justify-content: space-around;
+    }
+
+    .mmargin-top {
+        margin-top: 30%;
+    }
+
+    .wm10 {
+        width: 10%;
+    }
+
+    .wm30 {
+        width: 30%;
+    }
+
+    .wm40 {
+        width: 40%;
+    }
+
+    .wm100 {
+        width: 100%;
+    }
+
+    .boxed {
+        max-width: 90%;
+    }
+
+    .mgap20 {
+        gap: 20px;
+    }
+
+    .mmodal-content {
+        display: block;
+    }
+
+    .mmodal-content img {
+        width: 30%;
+        height: auto;
+    }
+
+}

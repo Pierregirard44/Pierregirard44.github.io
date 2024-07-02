@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Pierre Girard</title>
+        <meta type="description" content="Portfolio de Pierre Girard">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    </head>
+
+    <body>
+
+        <header class="">
+            <div class="boxed align-center">
+                <div class="flex space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="#accueil" onclick="closeMenu()" class="header-logo">
+                        <img src="img/portrait.jpg">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#aPropos" onclick="closeMenu()">A propos</a></li>
+                        <li><a href="#News" onclick="closeMenu()">News</a></li>
+                        <li><a href="#competences" onclick="closeMenu()">Compétences</a></li>
+                        <li><a href="#realisations" onclick="closeMenu()">Réalisations</a></li>
+                        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                        <li><a href="img/Girard_Pierre_CV.pdf" download="Girard_Pierre_CV.pdf">Télécharger le CV</a>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+        
+        <div class="slider" id="accueil">
+            <img src="img/slider.jpg" alt="slider" class="slider-background">
+            <div class="slider-content">
+                <h1 class="slider-title">Pierre Girard</h1>
+                <p>Développeur curieux et facétieux</p>
+            </div>
+        </div>
+
+        <div class="section dark" id="aPropos" >
+            <div class="boxed">
+                <div class="flex toColumn ">
+                    <div class="w40 wm100 mCenter">
+                        <h2>À propos de moi</h2>
+                    </div>
+                    <div class="w60 wm100">
+                        <p>Je suis un développeur web en recherche d'alternance après 9 mois de formation à l'Ada Tech School. Curieux, j'apprends vite et efficacement, et je n'ai pas de mal à me former rapidement sur de nouveaux langages. Chaque nouveau projet est pour moi l'occasion de découvrir de nouvelles méthodes, outils et technologies, et de repousser les limites de mes compétences.</p>
+                        <p>En dehors du travail, je suis un grand fan de jeux de rôle et de jeux de société. J'ai également créé mon propre jeu de rôle et un jeu de société amateur, ce qui nourrit mon imagination et mon sens de la créativité, des qualités que je mets au service de mon métier de développeur. Les jeux de rôle m'inspirent par leur complexité et leurs univers immersifs, tandis que les jeux de société m'encouragent à penser stratégiquement et à collaborer avec les autres.</p>
+                        <p>Mon expérience en tant qu'opticien m'a également apporté des compétences précieuses pour mon futur métier de développeur. En tant qu'opticien, j'ai développé une grande rigueur, une attention aux détails et une capacité à résoudre des problèmes complexes, tout en offrant un excellent service client. Ces compétences sont directement transférables au développement web, où la précision, l'analyse et la satisfaction des utilisateurs sont primordiales.</p>
+                        <p>Mon objectif est de continuer à évoluer dans ce domaine en intégrant une équipe dynamique et innovante où je pourrai apporter mes compétences et apprendre des autres.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section dark" id="News" >
+            <div class="boxed">
+                <div class="flex toColumn ">
+                    <div class="w40 wm100 mCenter">
+                        <h2>Dernières news</h2>
+                    </div>
+                    <div class="w60 wm100">
+                        <p> 02/07/2024 : Lancement en ligne du Portfolio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section dark" id="competences">
+            <div class="boxed text-center">
+                <h2>Découvrez mes compétences</h2>
+                <div class="flex wrap gap20 space-between mspace-around">
+                    <div class="w20 wm40 skill">
+                        <img src="img/HTML.png" alt="HTML5">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="w20 wm40 skill">
+                        <img src="img/CSS.png" alt="CSS3">
+                        <p>CSS3</p>
+                    </div>
+                    <div class="w20 wm40 skill">
+                        <img src="img/JS.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="w20 wm40 skill">
+                        <img src="img/REACT.png" alt="React">
+                        <p>React</p>
+                    </div>
+                </div>
+                <div class="flex wrap gap20 space-between mspace-around">
+                    <div class="w20 wm40 skill">
+                        <img src="img/ANGULAR.png" alt="React">
+                        <p>Angular</p>
+                    </div>
+                    <div class="w20 wm40 skill">
+                        <img src="img/PHP.png" alt="PHP">
+                        <p>PHP</p>
+                    </div>
+                    <div class="w20 wm40 skill">
+                        <img src="img/MYSQL.png" alt="SQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="w20 wm40 skill">
+                        <img src="img/NODE.png" alt="Node.js">
+                        <p>Node.js</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="section dark" id="realisations">
+            <div class="boxed text-center">
+                <h2>Découvrez quelques projets</h2>
+                <div class="flex wrap gap20 space-between mspace-around">
+                    <div class="w25 wm40 realisation-text">
+                        <a id="openModalBtnRpg" class="realisation">
+                            <img src="img/PROJET1.png" alt="Realisation 1">
+                            <h3>RPG Soundbox</h3>
+                        </a>
+                        <div id="myModalRpg" class="modal rpg">
+                            <div class="modal-content mmargin-top">
+                                <span class="closeRpg close">&times;</span>
+                                <div class="space-around">
+                                    <div class="flex gap20 mmodal-content modalRpg">
+                                        <img src="img/RPG1.png">
+                                        <div class="align-center">
+                                            <p class="underline margin-bottom">Projet : Sound_rpg - Application de Sons pour Joueurs de RPG 🎶</p>
+                                            <p class="margin-bottom">Sound_rpg est une application amateur pour les joueurs de jeux de rôle, permettant de lancer des sons immersifs. Développée en une journée comme défi "un jour, une application", l'équipe (Marie et Pierre) a commencé avec du JavaScript vanilla et HTML/CSS pour créer une boîte à sons. Ensuite, nous avons migré vers un projet fullstack avec React, TailwindCSS et NestJs, ajoutant des nouveaux sons, une nouvelle charte graphique, une relation avec une API. À l'avenir nous voulons intégrer une base de données, des profils utilisateur, une liste de sons favoris, une génération de fiche de personnage et un index de jeu.</p>
+                                            <p class="margin-bottom">Technos utilisées : React, TailwindCSS, MySQL</p>
+                                            <p>
+                                                <a href="https://github.com/Pierregirard44/appli_sound_rpg" target="_blank">Lien vers le github RPG Soundbox</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w25 wm40 realisation-text">
+                        <a id="openModalBtnRaclavel" class="realisation">
+                            <img src="img/PROJET2.png" alt="Realisation 2">
+                            <h3>Raclavel</h3>
+                        </a>
+                        <div id="myModalRaclavel" class="modal raclavel">
+                            <div class="modal-content mmargin-top">
+                                <span class="closeRaclavel close">&times;</span>
+                                <div class="space-around">
+                                    <div class="flex gap20 mmodal-content modalRaclavel">
+                                        <img src="img/RV0.png">
+                                        <div class="align-center">
+                                            <p class="underline margin-bottom">Projet : Raclavel - Site de Microblogging dédié à la Raclette 🧀</p>
+                                            <p class="margin-bottom">Raclavel est une plateforme de micro-blogging, inspirée d'Instagram, pour les passionnés de fromage fondu. Les utilisateurs peuvent créer des posts avec des images et du texte, les afficher sur leur Wall personnel, voir les posts des autres sur leur Wall, consulter tous les posts sur une page News, modifier leur profil (biographie et avatar), et supprimer un post ou leur compte. Le projet a été réalisé par une équipe de trois personnes (Mehdi, Alexandre et Pierre) en 7 jours.</p>
+                                            <p class="margin-bottom">Technos utilisées : Laravel, TailwindCSS, PostgreSQL, Docker</p>
+                                            <p>
+                                                <a href="https://github.com/Pierregirard44/Microblogging" target="_blank">Lien vers le github Raclavel</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w25 wm40 realisation-text">
+                        <a id="openModalBtnYellowaves" class="realisation">
+                            <img src="img/PROJET3.png" alt="Realisation 3">
+                            <h3 style="color: black">Yellowaves</h3>
+                        </a>
+                        <div id="myModalYellowaves" class="modal">
+                            <div class="modal-content mmargin-top">
+                                <span class="closeYellowaves close">&times;</span>
+                                <div class="space-around">
+                                    <div class="flex gap20 mmodal-content modalYellowaves">
+                                        <img src="img/YW0.png">
+                                        <img src="img/YW1.png">
+                                        <img src="img/YW2.png">
+                                        <div class="align-center">
+                                            <p class="underline margin-bottom">Projet : Yellowaves - Application Mobile pour les Meilleurs Spots de Surf 🏄</p>
+                                            <p class="margin-bottom">Yellowaves est une application mobile, développée en un mois par une équipe de trois (Quentin, Pierre, Marie), qui répertorie les meilleurs spots de surf. Le projet a été divisé en deux phases : deux semaines de frontend et deux semaines de backend, avec des rétrospectives et une démonstration finale pour livrer un MVP.</p>
+                                            <p>Technos utilisées en front : Kotlin, Android Studio.</p>
+                                            <p class="margin-bottom">Technos utilisées en back : Go, VS Code, MySQL, MAMP.</p>
+                                            <p>
+                                                <a href="https://github.com/Pierregirard44/Yellowaves-mobile-front" target="_blank">Lien vers le github front Yellowaves</a>
+                                                <a href="https://github.com/Pierregirard44/Yellowaves-mobile-back" target="_blank">Lien vers le github back Yellowaves</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section dark" id="contact">
+            <div class="boxed text-center">
+                <h2>Liens pour me contacter</h2>
+                <div class="flex toColumn mgap20 contact-wrapper">
+                    <div class="w10 wm10 contact ">
+                        <a href="https://github.com/Pierregirard44 " target="_blank" title="Lien vers mon Github dans une nouvelle fenêtre">
+                            <img src="img/GITHUB.png" alt="Github">
+                        </a>
+                    </div>
+                    <div class="w10 wm10 contact text-center">
+                        <a href="mailto:girard_pierre@hotmail.fr" title="Ouverture de logiciel d'envoi de mail vers mon mail">
+                            <img src="img/MAIL.png" alt="Mail">
+                        </a>
+                    </div>
+                    <div class="w10 wm10 contact">
+                        <a href="https://www.linkedin.com/in/pierregirard44/" target="_blank" title="Lien vers mon Linkedin dans une nouvelle fenêtre">
+                            <img src="img/LINKEDIN.png" alt="Linkedin">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal générique -->
+        <!-- <button id="openModalBtn">Ouvrir la fenêtre modale</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Ceci est une fenêtre modale.</p>
+            </div>
+        </div> -->
+
+    </body>
+
+    <script src="js/app.js"></script>
+</html>

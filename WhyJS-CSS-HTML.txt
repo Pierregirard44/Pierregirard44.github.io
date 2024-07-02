@@ -1,0 +1,99 @@
+React permet de créer des SPA (single page application).
+
+Lorsqu'on visite une SPA, un gros morceau de JavaScript est téléchargé puis exécuté, afin de créer la page 
+côté client, directement sur le navigateur.
+
+Une fois l'application créée, la navigation sans actualisation côté Front et la mise à jour du contenu via 
+des requêtes fetch donne un aspect d'application sur une seule page, ou Single Page Application.
+
+Bien entendu, on parle ici d'une utilisation de React seul, sans Next.js (nous y reviendrons plus tard).
+
+Une SPA est un bon choix de technologie lorsqu'on veut créer une page qui n'a pas pour vocation à se faire 
+indexer, comme le dashboard d'une banque accessible après une authentification, une réplique de photoshop 
+ou un logiciel de montage directement sur navigateur.
+
+C'est en revanche un choix catastrophique lorsqu'on veut créer des pages webs qui ont vocation à être indexées 
+par les moteurs de recherche, comme les articles de blog, les portfolios(!), les sites vitrines, etc ...
+
+Pourquoi ?
+
+Car un moteur de recherche analyse le contenu des pages mises en ligne publiquement afin de les indexer et de 
+les faire correspondre à certaines recherches. Ce contenu à analyser est composé de titres, de liens, d'images, 
+de vidéos, de paragraphes, etc ...
+
+Une SPA, par définition, n'a pas encore de contenu quand elle se fait télécharger par le navigateur, ce n'est 
+qu'un grand script qui doit se faire exécuter pour créer le contenu côté client.
+
+Donc, les moteurs de recherche, même s'il y a eu de grands progrès ces dernières années, ne peuvent pas les 
+indexer correctement, car ils voient simplement un doctype et une div avec la class "app" (pour simplifier).
+
+Vous pouvez faire le test vous-même en effectuant un clic droit sur une SPA puis "view page source". On parle 
+toujours ici d'une app faite avec React seulement (pas avec Next.js).
+
+Enfin, un portfolio est souvent un simple site statique, qui n'a pas du tout besoin des fonctionnalités de 
+React. Télécharger un bundle JS nécessaire à la mise en place de la SPA nuit aux performances de la page, 
+pour rien.
+
+Pourquoi créer un Portfolio avec React est un choix tragique ?
+
+Lorsque quelqu'un apprend React, il y a 90% de chances qu'il se dise à un moment donné qu'il a eu l'idée du 
+siècle : Il va créer un portfolio avec !
+
+Sous-entendu que ça fera déjà un projet à montrer, et que sur un malentendu, ça peut faire classe. 😎
+
+Cela démontre tristement que la plupart des apprentis dev web-front n'ont absolument aucune idée de ce qu'ils 
+font, et qu'ils se lancent dans les frameworks JS pour avoir l'air cool, parce que c'est à la mode et que 
+c'est écrit dans les annonces de recherche d'emploi.
+
+Malheureusement, les frameworks, et React le premier, jouent sur cette ambiguïté afin d'avoir le plus 
+d'utilisateurs possible. De mémoire, on ne trouve pas une seule fois la mention d'une absence de SEO potable 
+lorsqu'on met un site en ligne avec React dans son ancienne documentation - la documentation 'legacy' - qui 
+fut la documentation officielle pendant plus de 6 ans.
+
+En plus de cela, très peu de formateurs, blogueurs, podcast(eurs?) ou autres influenceurs-codeurs n'en parlent 
+non plus.
+
+L'image qu'on renvoie quand on code un portfolio avec React
+
+Un portfolio est censé être la vitrine des talents, des compétences, et de la capacité à utiliser les bons 
+outils aux bons endroits d'un développeur.
+
+Coder un portfolio avec React est un formidable moyen de montrer qu'on n'a rien de tout ça.
+
+Un véritable dev, lors d'un entretien technique par exemple, verra ce choix stratégique et tirera 
+inévitablement les conclusions suivantes sur l'auteur de ce portfolio :
+
+Il ne connaît pas ou ne maîtrise pas le concept de "performances web".
+
+Il a utilisé React pour créer un site statique qui n'a pas besoin des fonctionnalités de React.
+
+Il ne sait pas utiliser les bons outils aux bons endroits.
+
+Il ne comprend pas le concept de SPA.
+
+Il n'est pas bon ou ne connaît pas le concept de SEO.
+
+Il suit probablement les modes sans les comprendre car il est débutant.
+
+Comment résoudre ce problème très facilement ?
+
+Une fois qu'on a compris le problème, sa résolution est élémentaire.
+
+Vous voulez montrer vos talents avec React via un portfolio ?
+
+Créez un portfolio en HTML - CSS - JavaScript "vanilla", dans lequel vous intégrerez des liens vers vos 
+fabuleux et légitimes projets React.
+
+Ce portfolio sera non seulement très rapidement affiché par votre navigateur, mais également bien référencé 
+par Google et consorts.
+
+Vous pouvez aussi utiliser Next.js, qui utilise React sous le capot, tout en permettant de se faire bien 
+référencer dans les SERP grâce à un système de Static Site Generation et de Server-Side Rendering. 
+Néanmoins, je vous conseille de seulement utiliser Next.js si votre portfolio contient un blog ou d'autres 
+fonctionnalités qui légitiment son utilisation.
+
+On n'abat pas un moustique avec un bazooka, et un site vitrine statique est très souvent parfaitement adapté 
+aux besoins d'un portfolio, même si ça sonne moins sexy que de dire qu'on l'a fait avec telle ou telle 
+technologie.
+
+Le but d’un portfolio est de montrer des projets, pas d'être le seul et unique projet à présenter.
