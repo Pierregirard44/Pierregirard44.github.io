@@ -176,7 +176,7 @@ p {
 
 .realisation:hover img {
     filter: brightness(100%);
-    box-shadow: 0 0 40px rgba(254, 204, 0, 100);
+    box-shadow: 0 0 30px rgba(254, 204, 0, 100);
     cursor: pointer;
 }
 
@@ -524,6 +524,68 @@ header {
     }
 
     .mrealisation img {
-        filter: brightness(100%);
+        filter: brightness(100%);;
     }
 }
+
+/* CSS Carousel 1 */
+/* #wrapper {
+    width: 100%;
+    max-width: 1280px;
+    position: relative;
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    display: flex;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+    padding-left: 8px;
+    grid-gap: 50px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: content-box;
+  }
+  
+  .item {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: aqua;
+  } */
+  
