@@ -10,6 +10,7 @@
 /* appel de la font exluivemnt pour le body pour eviter de charger la font pour chaque element */
 body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 /* style du slider */
@@ -525,6 +526,11 @@ header {
 
     .mrealisation img {
         filter: brightness(100%);;
+    }
+
+    .mcontact img {
+        filter: brightness(100%);
+        width: 50px;
     }
 }
 
