@@ -81,33 +81,75 @@
 //Fin modal
 
 //Carousel 1
-// const gap = 16;
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel-button--right');
+const prevButton = document.querySelector('.carousel-button--left');
 
-// const carousel = document.getElementById("carousel"),
-//   content = document.getElementById("content"),
-//   next = document.getElementById("next"),
-//   prev = document.getElementById("prev");
+const slideWidth = slides[0].getBoundingClientRect().width;
 
-// next.addEventListener("click", e => {
-//   carousel.scrollBy(width + gap, 0);
-//   if (carousel.scrollWidth !== 0) {
-//     prev.style.display = "flex";
-//   }
-//   if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-//     next.style.display = "none";
-//   }
-// });
-// prev.addEventListener("click", e => {
-//   carousel.scrollBy(-(width + gap), 0);
-//   if (carousel.scrollLeft - width - gap <= 0) {
-//     prev.style.display = "none";
-//   }
-//   if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-//     next.style.display = "flex";
-//   }
-// });
+// Arrange the slides next to one another
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+};
+slides.forEach(setSlidePosition);
 
-// let width = carousel.offsetWidth;
-// window.addEventListener("resize", e => (width = carousel.offsetWidth));
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+};
+
+nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    let nextSlide = currentSlide.nextElementSibling;
+
+    if (!nextSlide) {
+        nextSlide = slides[0];
+    }
+
+    moveToSlide(track, currentSlide, nextSlide);
+});
+
+prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    let prevSlide = currentSlide.previousElementSibling;
+
+    if (!prevSlide) {
+        prevSlide = slides[slides.length - 1];
+    }
+
+    moveToSlide(track, currentSlide, prevSlide);
+});
+
+// Set the first slide as the current slide
+const gap = 16;
+
+const carousel = document.getElementById("carousel"),
+  content = document.getElementById("content"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
+
+next.addEventListener("click", e => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
+
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 //Fin carousel 1

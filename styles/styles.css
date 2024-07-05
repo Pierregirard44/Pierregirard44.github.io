@@ -10,7 +10,8 @@
 /* appel de la font exluivemnt pour le body pour eviter de charger la font pour chaque element */
 body {
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+    
+
 }
 
 /* style du slider */
@@ -535,9 +536,9 @@ header {
 }
 
 /* CSS Carousel 1 */
-/* #wrapper {
+#wrapper {
     width: 100%;
-    max-width: 1280px;
+    max-width: 964px;
     position: relative;
   }
   
@@ -545,7 +546,6 @@ header {
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    display: flex;
   }
   
   #carousel::-webkit-scrollbar {
@@ -581,17 +581,21 @@ header {
   
   #content {
     display: grid;
-    padding-left: 8px;
-    grid-gap: 50px;
+    grid-gap: 16px;
     grid-auto-flow: column;
     margin: auto;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
   
   .item {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background-color: aqua;
-  } */
-  
+    width: 180px;
+    height: 180px;
+    background: green;
+  }
+
+  .carouselbody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+  }
