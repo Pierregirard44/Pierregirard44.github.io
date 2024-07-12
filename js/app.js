@@ -80,76 +80,17 @@
     }
 //Fin modal
 
-//Carousel 1
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel-button--right');
-const prevButton = document.querySelector('.carousel-button--left');
-
-const slideWidth = slides[0].getBoundingClientRect().width;
-
-// Arrange the slides next to one another
-const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
-};
-slides.forEach(setSlidePosition);
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
-};
-
-nextButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
-    let nextSlide = currentSlide.nextElementSibling;
-
-    if (!nextSlide) {
-        nextSlide = slides[0];
+//gestion du boutton partie cachée
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var hiddenContent = document.getElementById('hiddenContent');
+    if (hiddenContent.classList.contains('hidden')) {
+        hiddenContent.classList.remove('hidden');
+        this.classList.remove('arrow-down');
+        this.classList.add('arrow-up');
+    } else {
+        hiddenContent.classList.add('hidden');
+        this.classList.remove('arrow-up');
+        this.classList.add('arrow-down');
     }
-
-    moveToSlide(track, currentSlide, nextSlide);
 });
-
-prevButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
-    let prevSlide = currentSlide.previousElementSibling;
-
-    if (!prevSlide) {
-        prevSlide = slides[slides.length - 1];
-    }
-
-    moveToSlide(track, currentSlide, prevSlide);
-});
-
-// Set the first slide as the current slide
-const gap = 16;
-
-const carousel = document.getElementById("carousel"),
-  content = document.getElementById("content"),
-  next = document.getElementById("next"),
-  prev = document.getElementById("prev");
-
-next.addEventListener("click", e => {
-  carousel.scrollBy(width + gap, 0);
-  if (carousel.scrollWidth !== 0) {
-    prev.style.display = "flex";
-  }
-  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "none";
-  }
-});
-prev.addEventListener("click", e => {
-  carousel.scrollBy(-(width + gap), 0);
-  if (carousel.scrollLeft - width - gap <= 0) {
-    prev.style.display = "none";
-  }
-  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "flex";
-  }
-});
-
-let width = carousel.offsetWidth;
-window.addEventListener("resize", e => (width = carousel.offsetWidth));
-
-//Fin carousel 1
+//Fin gestion du boutton partie cachée

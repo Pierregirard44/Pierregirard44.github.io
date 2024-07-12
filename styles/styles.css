@@ -10,8 +10,6 @@
 /* appel de la font exluivemnt pour le body pour eviter de charger la font pour chaque element */
 body {
     font-family: 'Inter', sans-serif;
-    
-
 }
 
 /* style du slider */
@@ -535,67 +533,50 @@ header {
     }
 }
 
-/* CSS Carousel 1 */
-#wrapper {
-    width: 100%;
-    max-width: 964px;
-    position: relative;
-  }
-  
-  #carousel {
-    overflow: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
-  
-  #carousel::-webkit-scrollbar {
-    height: 0;
-  }
-  
-  #prev,
-  #next {
+/* Partie cachée des realisations */
+.container {
     display: flex;
     justify-content: center;
-    align-content: center;
-    background: white;
-    border: none;
-    padding: 8px;
-    border-radius: 50%;
-    outline: 0;
-    cursor: pointer;
-    position: absolute;
-  }
-  
-  #prev {
-    top: 50%;
-    left: 0;
-    transform: translate(50%, -50%);
-    display: none;
-  }
-  
-  #next {
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
-  }
-  
-  #content {
-    display: grid;
-    grid-gap: 16px;
-    grid-auto-flow: column;
-    margin: auto;
-    box-sizing: border-box;
-  }
-  
-  .item {
-    width: 180px;
-    height: 180px;
-    background: green;
-  }
+    align-items: center;
+}
 
-  .carouselbody {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-  }
+.arrow-down::before,
+.arrow-up::before {
+    content: '';
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-down::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow-up::before {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+button:hover::before {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 20px;
+    appearance: none;
+    box-shadow: none;
+}
+/* Fin de la partie caché boutton pour les réalisations */
