@@ -91,6 +91,10 @@ p {
     width: 15%;
 }
 
+.w20 {
+    width: 20%;
+}
+
 /* donner une largeur de 25% à l'élément qui a la classe w25 */
 .w25 {
     width: 25%;
@@ -373,6 +377,12 @@ header {
     object-fit: cover;
 }
 
+.modalCopameba img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .modal-content a {
     text-decoration: underline;
     color: rgba(254, 204, 0, 100);
@@ -531,6 +541,10 @@ header {
 
     .mrealisation img {
         filter: brightness(100%);;
+    }
+
+    .mrealisationmargin {
+        margin: 0 10px 0 10px;
     }
 
     .mcontact img {

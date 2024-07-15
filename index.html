@@ -205,8 +205,56 @@
             </div>
         </div>
         <!-- Partie cachée -->
-        <div id="hiddenContent" class="hidden dark justify-center section text-center">
-            <div class="w10 wm30 realisation-text">
+        <div id="hiddenContent" class="hidden dark space-between section text-center flex">
+            <div class="w20 wm30 realisation-text mrealisationmargin">
+                <a id="openModalBtnPortfolio" class="realisation mrealisation">
+                    <img src="img/portfolioreact.jpg" alt="Realisation 1">
+                    <h3>Portfolio React</h3>
+                </a>
+                <div id="myModalPortfolio" class="modal portfolio">
+                    <div class="modal-content mmargin-top">
+                        <span class="closePortfolio close">&times;</span>
+                        <div class="space-around">
+                            <div class="flex gap20 mmodal-content modalPortfolio">
+                                <img src="img/PF5.png">
+                                <div class="align-center">
+                                    <p class="underline margin-bottom">Projet : Portfolio React - Premier portfolio créé avec le React ⚛️</p>
+                                    <p class="margin-bottom">Le Portfolio React est mon premier projet réalisé avec le framework React. C'est une vitrine de mes compétences en développement web, où je présente mes expériences professionnelles, mes projets personnels, mes compétences techniques et mes coordonnées de contact. Ce portfolio a été conçu pour être moderne, réactif et convivial. J'ai utilisé React pour structurer l'application de manière modulaire et réutilisable. TailwindCSS a été utilisé pour le stylage, ce qui a permis une personnalisation efficace et rapide de l'apparence. J'ai également utilisé Yarn comme gestionnaire de paquets pour gérer les dépendances du projet, assurant ainsi une gestion efficace des bibliothèques et des versions utilisées dans le développement.</p>
+                                    <p class="margin-bottom">Technos utilisées : React, TailwindCSS, Yarn</p>
+                                    <p>
+                                        <a href="https://github.com/Pierregirard44/Portfolio" target="_blank">Lien vers le github Portfolio React</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w20 wm30 realisation-text mrealisationmargin">
+                <a id="openModalBtnCopameba" class="realisation mrealisation">
+                    <img src="img/COPAMEBA.png" alt="Realisation 1">
+                    <h3 style="color: black;">Copameba</h3>
+                </a>
+                <div id="myModalCopameba" class="modal copameba">
+                    <div class="modal-content mmargin-top">
+                        <span class="closeCopameba close">&times;</span>
+                        <div class="space-around">
+                            <div class="flex gap20 mmodal-content modalCopameba">
+                                <img src="img/COPAMEBA1.png">
+                                <div class="align-center">
+                                    <p class="underline margin-bottom">Projet : Copameba -  Plateforme de vente de meuble 🛋️</p>
+                                    <p class="margin-bottom">COPAMEBA est une plateforme de vente en ligne de meubles de seconde main, développée dans le cadre d'un projet collectif à Ada Tech School. Ce projet a été réalisé en deux semaines par une équipe de 8 apprenant.es, répartis en deux équipes (back-end et front-end) qui ont alterné leurs rôles à la fin de la première semaine. Le but était de créer un site interactif pour permettre aux utilisateurs de vendre leurs meubles, avec une page d'administration pour la gestion du stock des produits. Le projet a débuté avec l'élaboration d'une maquette sous forme de wireframe sur Miro, suivi d'une gestion de projet organisée via Trello. L'équipe back-end a utilisé Node.js et Express pour mettre en place un serveur sécurisé, et SQLite pour gérer la base de données des meubles, catégories et utilisateurs. Pour les requêtes, Axios a été employé. L'équipe front-end a développé l'interface utilisateur avec React.js et Bootstrap, assurant une expérience utilisateur moderne et réactive.</p>
+                                    <p class="margin-bottom">Technos utilisées : Node.js, Express, SQLite, React.js, Bootstrap, Axios</p>
+                                    <p>
+                                        <a href="https://github.com/Pierregirard44/Plateforme-de-meubles-Copameba" target="_blank">Lien vers le github Copameba</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w20 wm30 realisation-text mrealisationmargin">
                 <a id="openModalBtnPortfolio" class="realisation mrealisation">
                     <img src="img/portfolioreact.jpg" alt="Realisation 1">
                     <h3>Portfolio React</h3>
@@ -231,6 +279,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="container dark">
             <button id="toggleButton" class="arrow-down dark"></button>
         </div>
