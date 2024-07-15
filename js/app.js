@@ -24,18 +24,21 @@
     var modalYellowaves = document.getElementById("myModalYellowaves");
     var modalRaclavel = document.getElementById("myModalRaclavel");
     var modalRpg = document.getElementById("myModalRpg");
+    var modalPortfolio = document.getElementById("myModalPortfolio");
 
     // Obtenir le bouton qui ouvre le modal
     var btn = document.getElementById("openModalBtn");
     var btnYellowaves = document.getElementById("openModalBtnYellowaves");
     var btnRaclavel = document.getElementById("openModalBtnRaclavel");
     var btnRpg = document.getElementById("openModalBtnRpg");
+    var btnPortfolio = document.getElementById("openModalBtnPortfolio");
 
     // Obtenir l'élément <span> qui ferme le modal
     var span = document.getElementsByClassName("close")[0];
     var spanYellowaves = document.getElementsByClassName("closeYellowaves")[0];
     var spanRaclavel = document.getElementsByClassName("closeRaclavel")[0];
     var spanRpg = document.getElementsByClassName("closeRpg")[0];
+    var spanPortfolio = document.getElementsByClassName("closePortfolio")[0];
 
     // Lorsque l'utilisateur clique sur le bouton, ouvrir le modal
     btnYellowaves.onclick = function() {
@@ -50,6 +53,9 @@
     btnRpg.onclick = function() {
         modalRpg.style.display = "block";
     }
+    btnPortfolio.onclick = function() {
+        modalPortfolio.style.display = "block";
+    }
 
     // Lorsque l'utilisateur clique sur <span> (x), fermer le modal
     spanYellowaves.onclick = function() {
@@ -60,6 +66,9 @@
     }
     spanRpg.onclick = function() {
         modalRpg.style.display = "none";
+    }
+    spanPortfolio.onclick = function() {
+        modalPortfolio.style.display = "none";
     }
 
     // Lorsque l'utilisateur clique n'importe où en dehors du modal, fermer le modal
@@ -76,6 +85,11 @@
     window.onclick = function(event) {
         if (event.target == modalRpg) {
             modalRpg.style.display = "none";
+        }
+    }
+    window.onclick = function(event) {
+        if (event.target == modalPortfolio) {
+            modalPortfolio.style.display = "none";
         }
     }
 //Fin modal
