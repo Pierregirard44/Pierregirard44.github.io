@@ -26,6 +26,7 @@
     var modalRpg = document.getElementById("myModalRpg");
     var modalPortfolio = document.getElementById("myModalPortfolio");
     var modalCopameba = document.getElementById("myModalCopameba");
+    var modalMalink = document.getElementById("myModalMalink");
 
     // Obtenir le bouton qui ouvre le modal
     var btn = document.getElementById("openModalBtn");
@@ -34,6 +35,8 @@
     var btnRpg = document.getElementById("openModalBtnRpg");
     var btnPortfolio = document.getElementById("openModalBtnPortfolio");
     var btnCopameba = document.getElementById("openModalBtnCopameba");
+    var btnMalink = document.getElementById("openModalBtnMalink");
+
     // Obtenir l'élément <span> qui ferme le modal
     var span = document.getElementsByClassName("close")[0];
     var spanYellowaves = document.getElementsByClassName("closeYellowaves")[0];
@@ -41,6 +44,7 @@
     var spanRpg = document.getElementsByClassName("closeRpg")[0];
     var spanPortfolio = document.getElementsByClassName("closePortfolio")[0];
     var spanCopameba = document.getElementsByClassName("closeCopameba")[0];
+    var spanMalink = document.getElementsByClassName("closeMalink")[0];
 
     // Lorsque l'utilisateur clique sur le bouton, ouvrir le modal
     btnYellowaves.onclick = function() {
@@ -61,6 +65,9 @@
     btnCopameba.onclick = function() {
         modalCopameba.style.display = "block";
     }
+    btnMalink.onclick = function() {
+        modalMalink.style.display = "block";
+    }
 
     // Lorsque l'utilisateur clique sur <span> (x), fermer le modal
     spanYellowaves.onclick = function() {
@@ -77,6 +84,9 @@
     }
     spanCopameba.onclick = function() {
         modalCopameba.style.display = "none";
+    }
+    spanMalink.onclick = function() {
+        modalMalink.style.display = "none";
     }
 
     // Lorsque l'utilisateur clique n'importe où en dehors du modal, fermer le modal
@@ -105,6 +115,12 @@
             modalCopameba.style.display = "none";
         }
     }
+    window.onclick = function(event) {
+        if (event.target == modalMalink) {
+            modalMalink.style.display = "none";
+        }
+    }
+    
 //Fin modal
 
 //gestion du boutton partie cachée
