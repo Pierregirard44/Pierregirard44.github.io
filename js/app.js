@@ -27,6 +27,7 @@
     var modalPortfolio = document.getElementById("myModalPortfolio");
     var modalCopameba = document.getElementById("myModalCopameba");
     var modalMalink = document.getElementById("myModalMalink");
+    var modalRivendell = document.getElementById("myModalRivendell");
 
     // Obtenir le bouton qui ouvre le modal
     var btn = document.getElementById("openModalBtn");
@@ -36,6 +37,7 @@
     var btnPortfolio = document.getElementById("openModalBtnPortfolio");
     var btnCopameba = document.getElementById("openModalBtnCopameba");
     var btnMalink = document.getElementById("openModalBtnMalink");
+    var btnRivendell = document.getElementById("openModalBtnRivendell");
 
     // Obtenir l'élément <span> qui ferme le modal
     var span = document.getElementsByClassName("close")[0];
@@ -45,6 +47,7 @@
     var spanPortfolio = document.getElementsByClassName("closePortfolio")[0];
     var spanCopameba = document.getElementsByClassName("closeCopameba")[0];
     var spanMalink = document.getElementsByClassName("closeMalink")[0];
+    var spanRivendell = document.getElementsByClassName("closeRivendell")[0];
 
     // Lorsque l'utilisateur clique sur le bouton, ouvrir le modal
     btnYellowaves.onclick = function() {
@@ -68,6 +71,9 @@
     btnMalink.onclick = function() {
         modalMalink.style.display = "block";
     }
+    btnRivendell.onclick = function() {
+        modalRivendell.style.display = "block";
+    }
 
     // Lorsque l'utilisateur clique sur <span> (x), fermer le modal
     spanYellowaves.onclick = function() {
@@ -87,6 +93,9 @@
     }
     spanMalink.onclick = function() {
         modalMalink.style.display = "none";
+    }
+    spanRivendell.onclick = function() {
+        modalRivendell.style.display = "none";
     }
 
     // Lorsque l'utilisateur clique n'importe où en dehors du modal, fermer le modal
